@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  service-logger:
+    build: ./microservices/service-logger
+    container_name: logger
+    ports:
+      - "5001:5000"
+
+  service-strength:
+    build: ./microservices/service-strength
+    container_name: strength
+    ports:
+      - "5002:5000"
